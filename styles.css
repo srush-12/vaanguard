@@ -68,7 +68,7 @@ table {
 /* GLOBAL STYLES (MOBILE FIRST (SMALL) */
 
 /* MIN-WIDTH OF THE PAGE SHOULD NOT GO BELOW 400PX */
-html, body {
+body{
     min-width: 400px;
 }
 header{
@@ -257,16 +257,24 @@ main {
     font-family: var(--font);
     color: var(--black);
     padding: 10px;
+    display: grid;
 }
 #expertise h2 {
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 1rem;
+    text-indent: 0.5rem;
 }
 #expertise p {
     font-size: 1rem;
     color: var(--black);
     max-width: 100%;
+}
+#services {
+   padding-bottom: 25px;
+    color: var(--white);
+    margin-bottom: 25px;
+    display: grid;
 }
 #services .container{
     display: grid;
@@ -280,20 +288,73 @@ main {
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 1rem;
+    text-indent: 0.5rem;
+    color: var(--black);
 }
 #services section{
     background:var(--blue);
     color:var(--white);
-    padding: 5px;
+    padding: 20px;
     border-radius: 10px;
     
 }
-#services  .container ~ h3{
+#services h3{
     font-size: 1.3rem;
+    font-weight: bold;
     margin-bottom: 0.5rem;
+    text-indent: 0.5rem;
 }
 #services section p{
     font-size: 1rem;
+}
+#results {
+    font-family: var(--font);
+    background-color: var(--blue);
+    
+    
+}
+#results .container{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+#results h2{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-indent: 0.5rem;
+    color: var(--white);
+    padding: 10px;
+
+}
+#results p{
+    font-size: 1rem;
+    color: var(--white);
+    max-width: 100%;
+    
+}
+#results h3{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-indent: 0.5rem;
+    color: var(--white);
+    padding: 10px;
+}
+#results table{
+    width: 100%;   
+    border: .5px solid var(--charcoal);
+    background-color: var(--black);
+    color: var(--white);
+}
+tr:nth-child(even) {
+    background-color: var(--charcoal);
+}
+tr, td, th {
+    padding: 10px;
+    text-align: center;
+    border: solid .5px var(--charcoal);
+
 }
 
 
@@ -341,6 +402,9 @@ main {
 /* ADD ANIMATION ON stepUp for 1s ease-in-out forwards */
 .bar {
     animation: stepUp 1s ease-in-out forwards;
+}
+.Growth {
+margin-bottom: 20px;
 }
 
 
