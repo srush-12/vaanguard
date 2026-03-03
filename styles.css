@@ -78,9 +78,22 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-  padding: 16px;
-  
+    position: relative;    
+}
+#about::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 10px;
 
+  background: linear-gradient(
+    to bottom,
+    var(--blue) 0%,
+    transparent 100%
+  );
+  
 }
 /* nav styles */
 h1{
@@ -165,15 +178,20 @@ input {
 input:checked ~ ul {
     max-height: 500px;
 }
-
-
-
+/*innovation and investment section styles*/
 /* ADD A DIV WITH THE CLASS OF CONTAINER TO EVERY CONTENT CONTAINER THIS IS ALLOW THE BASE ELEMENTS TO BE 100% WIDTH, BUT CONSTRAIN THE ACTUAL CONTENT TO 90% */
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
 }
+main {
+    display: grid;
+    grid-template-columns:1fr ;
+    position: relative;
+   
+}
+
 
 /* ADD TO "INNOVATION & INVESTMENT SECTION (Photo by Kevin Matos on Unsplash) */
  #about{
@@ -184,6 +202,44 @@ input:checked ~ ul {
     text-align: center;
     padding: 1rem;
     overflow: hidden;
+    
+    
+    
+}
+#about .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    
+}
+#about h2{
+    font-size: 2.5rem;
+    color: var(--white);
+    font-family: var(--font);
+    font-weight: bold;
+}
+#about p{
+    font-size: 1rem;
+    color: var(--white);
+    font-family: var(--font);
+    max-width: 100%;
+}
+#about a{
+    background: var(--blue);
+    color: var(--white);
+    font-family: var(--font);
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 0.75rem 1.5rem;
+
+}
+#about a:hover{
+    background: var(--red);
+    color: var(--white);
+    transform: scale(1.05);
+    transition: transform 0.5s ease-in-out;
 }
 
 /* ADD FLOATING SVG LOGO BEFORE THE H1 */
