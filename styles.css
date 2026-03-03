@@ -95,6 +95,17 @@ header{
   );
   
 }
+/* ADD FLOATING SVG LOGO BEFORE THE H1 */
+ svg{
+    content: "";
+    float: left;
+    left:-.5rem;
+    width: 3.75rem;
+    height: 3.75rem;
+    background: url('images/vanguard-logo.svg') no-repeat center/contain;
+    
+
+}
 /* nav styles */
 h1{
     font-size: 2rem;
@@ -241,18 +252,51 @@ main {
     transform: scale(1.05);
     transition: transform 0.5s ease-in-out;
 }
-
-/* ADD FLOATING SVG LOGO BEFORE THE H1 */
- svg{
-    content: "";
-    float: left;
-    left:-.5rem;
-    width: 3.75rem;
-    height: 3.75rem;
-    background: url('images/vanguard-logo.svg') no-repeat center/contain;
-    
-
+/*expertise section styles*/
+#expertise {
+    font-family: var(--font);
+    color: var(--black);
+    padding: 10px;
 }
+#expertise h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+#expertise p {
+    font-size: 1rem;
+    color: var(--black);
+    max-width: 100%;
+}
+#services .container{
+    display: grid;
+    grid-template-columns:1fr;
+    padding: 10px;
+    font-family: var(--font);
+    gap: 10px;
+    
+}
+#services h2{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+#services section{
+    background:var(--blue);
+    color:var(--white);
+    padding: 5px;
+    border-radius: 10px;
+    
+}
+#services  .container ~ h3{
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+#services section p{
+    font-size: 1rem;
+}
+
+
 /* THIS ONE IS DONE FOR YOU */
 #bar-chart {
     display: grid;
