@@ -74,7 +74,7 @@ body{
 header{
     background: var(--black);
     color: var(--white);
-    padding: 10px;
+    padding: 1px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -228,19 +228,26 @@ main {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px); 
 }
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-15px); /* starts slightly above */
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0); /* ends in normal position */
+  }
+}
+
 #about h2{
     font-size: 2.5rem;
     color: var(--white);
     font-family: var(--font);
     font-weight: bold;
-    transform: translateY(-20px);
-    transition: transform 0.5s ease;
-}
-#about h2:hover{
-    transform: translateY(0);
-
+    animation: fadeInDown 2s ease forwards;
 }
 #about p{
     font-size: 1rem;
@@ -255,17 +262,16 @@ main {
     padding: 0.75rem 1.5rem;
     text-decoration: none;
     border-radius: 10px;
-    padding: 0.75rem 1.5rem;
-    transition: .5s;
-    
 
+    animation: fadeInDown 1s ease;
+    transition: transform 0.3s ease, background 0.3s ease;
 }
+
 #about a:hover{
     background: var(--red);
-    color: var(--white);
     transform: scale(1.05);
-    transition: transform 0.5s ease-in-out;
 }
+
 /*expertise section styles*/
 #expertise {
     font-family: var(--font);
@@ -278,6 +284,7 @@ main {
     font-weight: bold;
     margin-bottom: 1rem;
     text-indent: 0.5rem;
+    animation: fadeInDown 2s ease forwards;
 }
 #expertise p {
     font-size: 1rem;
@@ -304,19 +311,25 @@ main {
     margin-bottom: 1rem;
     text-indent: 0.5rem;
     color: var(--black);
+    animation: fadeInDown 2s ease forwards;
 }
 #services section{
     background:var(--blue);
     color:var(--white);
     padding: 20px;
     border-radius: 10px;
+    transition: transform 0.3s ease;
     
+}
+#services section:hover {
+  transform: translateY(-5px);
 }
 #services h3{
     font-size: 1.3rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
     text-indent: 0.5rem;
+    animation: fadeInDown 2s ease forwards;
 }
 #services section p{
     font-size: 1rem;
@@ -339,7 +352,8 @@ main {
     text-indent: 0.5rem;
     color: var(--white);
     padding: 10px;
-
+    animation: fadeInDown 2s ease forwards;
+    
 }
 #results p{
     font-size: 1rem;
@@ -354,6 +368,7 @@ main {
     text-indent: 0.5rem;
     color: var(--white);
     padding: 10px;
+    animation: fadeInDown 2s ease forwards;
 }
 #results table{
     width: 100%;   
@@ -438,6 +453,7 @@ margin-bottom: 20px;
     margin-bottom: 1rem;
     text-indent: 0.5rem;
     color: var(--white);
+    animation: fadeInDown 2s ease forwards;
 }
 #contact p{
     font-size: 1rem;
@@ -477,6 +493,13 @@ justify-items: center;
   border: none;
   cursor: pointer;
   justify-items: center;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+  
+#contact input[type="submit"]:hover{
+    background: var(--red);
+    transform: scale(1.05);
 }
 /*footer styles*/
 footer {
