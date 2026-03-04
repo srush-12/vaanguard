@@ -337,14 +337,12 @@ main {
 #results {
     font-family: var(--font);
     background-color: var(--blue);
-    
-    
-}
-#results .container{
     display: grid;
     grid-template-columns: 1fr;
     gap: 10px;
+    padding: 10px;
 }
+    
 #results h2{
     font-size: 2rem;
     font-weight: bold;
@@ -542,7 +540,7 @@ footer  a:nth-child(1s) {
         grid-column: span 2 ;
     }
     
-    #results .container {
+    #results {
         display: grid;
         grid-template-areas: "a a"
                              "b c";
