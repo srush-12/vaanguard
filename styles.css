@@ -346,6 +346,7 @@ main {
     border: .5px solid var(--charcoal);
     background-color: var(--black);
     color: var(--white);
+    margin-bottom: 20px;
 }
 tr:nth-child(even) {
     background-color: var(--charcoal);
@@ -435,7 +436,6 @@ margin-bottom: 20px;
   grid-template-columns: 1fr;
   gap: 10px;           
   width:100%;
-  margin: 0 auto;
 justify-items: center;
       
 }
@@ -444,6 +444,7 @@ justify-items: center;
   color: var(--white);
   margin-bottom: 4px;
   justify-self: start;
+  padding: 10px;
 }
 
 #contact input,
@@ -485,20 +486,60 @@ footer  a:nth-child(1s) {
 
 
 /* MEDIA QUERIES (MEDIUM) */ 
-
-    #results {
+@media all and (min-width: 800px) {
+    #services .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 20px;
+    }
+    #services h2{
+        grid-column: span 2 ;
+    }
+    
+    #results .container {
+        display: grid;
+        grid-template-areas: "a a"
+                             "b c";
         grid-template-columns: 1fr 1fr;
     }
-    .results-container {
-        flex-direction: row;
-        justify-content: space-between;
+    #results .results {
+        grid-area: a;
     }
-    .results-table {
-        width: 50%;
+    #results .Profits {
+        grid-area: b;
     }
-    .bar-chart {
-        width: 50%;
+    #results .Growth {
+        grid-area: c;
     }
-
+    #results table {
+    
+        height: 332px;
+    }
+    
+}
 
 /* MEDIA QUERIES (LARGE) */
+@media screen and (min-width: 1024px) {
+     #services .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+        gap: 20px;
+    }
+    #services h2{
+        grid-column: span 3 ;
+    }
+
+#contact form{  
+ display: grid;
+  grid-template-columns: auto 1fr auto 1fr;
+  gap: 10px;
+  
+
+}
+input[type="submit"]{
+     grid-column: 4 / 5;
+     height: 40px;
+}
+}
