@@ -486,7 +486,15 @@ footer  a:nth-child(1s) {
 
 
 /* MEDIA QUERIES (MEDIUM) */ 
-@media all and (min-width: 800px) {
+@media screen and (min-width: 800px) {
+   nav ul {
+        display: flex;
+        justify-content: center;
+        max-height: none;
+    }
+    nav label {
+        display: none;
+    }
     #services .container {
         display: grid;
         grid-template-columns: 1fr 1fr;
