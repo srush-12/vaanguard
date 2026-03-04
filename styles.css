@@ -74,7 +74,7 @@ body{
 header{
     background: var(--black);
     color: var(--white);
-    padding: 1px;
+    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -97,14 +97,20 @@ header{
 }
 /* ADD FLOATING SVG LOGO BEFORE THE H1 */
  svg{
-    content: "";
     float: left;
+    position: relative;
     left:-.5rem;
     width: 3.75rem;
     height: 3.75rem;
     background: url('images/vanguard-logo.svg') no-repeat center/contain;
-    
-
+    animation-name: bounce;
+    animation-duration: 1s ;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes bounce{
+    from{top:0;}
+    to{top:-10px;}
 }
 /* nav styles */
 h1{
@@ -222,13 +228,19 @@ main {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    
+    backdrop-filter: blur(10px);
 }
 #about h2{
     font-size: 2.5rem;
     color: var(--white);
     font-family: var(--font);
     font-weight: bold;
+    transform: translateY(-20px);
+    transition: transform 0.5s ease;
+}
+#about h2:hover{
+    transform: translateY(0);
+
 }
 #about p{
     font-size: 1rem;
@@ -244,6 +256,8 @@ main {
     text-decoration: none;
     border-radius: 10px;
     padding: 0.75rem 1.5rem;
+    transition: .5s;
+    
 
 }
 #about a:hover{
